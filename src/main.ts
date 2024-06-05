@@ -7,6 +7,7 @@ import Lion from './models/Lion';
 import Parrot from './models/Parrot';
 import Snake from './models/Snake';
 import Trout from './models/Trout';
+import EnclosureType from './models/EnclosureType';
 
 let allAnimals: Animal[] = [];
 let allEnclosures: Enclosure[] = [];
@@ -79,21 +80,21 @@ function addAnimal(event: Event) {
 
 function initializeEnclosures(): void {
   allEnclosures = [
-    new Enclosure(1, 'Savannah Habitat', 1995),
-    new Enclosure(2, 'Jungle Habitat', 2000),
-    new Enclosure(3, 'Aquatic Habitat', 2010),
-    new Enclosure(4, 'Reptile House', 2005)
+    new Enclosure(EnclosureType.SavannahHabitat, 'Savannah Habitat', 1995),
+    new Enclosure(EnclosureType.JungleHabitat, 'Jungle Habitat', 2000),
+    new Enclosure(EnclosureType.AquaticHabitat, 'Aquatic Habitat', 2010),
+    new Enclosure(EnclosureType.ReptileHouse, 'Reptile House', 2005)
   ];
 }
 
 function initializeAnimals(): void {
   allAnimals = [
-    new Lion('Simba', 2010, 'Requires a large space', 1),
-    new Elephant('Dumbo', 2008, 'Sensitive to cold', 1),
-    new Dolphin('Flipper', 2015, 'Needs clean water', 3),
-    new Snake('Kaa', 2012, 'Requires heated enclosure', 4),
-    new Parrot('Polly', 2013, 'Talkative', 2),
-    new Trout('Bubbles', 2016, 'Needs fresh water', 3)
+    new Lion('Simba', 2010, 'Requires a large space', EnclosureType.SavannahHabitat),
+    new Elephant('Dumbo', 2008, 'Sensitive to cold', EnclosureType.SavannahHabitat),
+    new Dolphin('Flipper', 2015, 'Needs clean water', EnclosureType.AquaticHabitat),
+    new Snake('Kaa', 2012, 'Requires heated enclosure', EnclosureType.ReptileHouse),
+    new Parrot('Polly', 2013, 'Talkative', EnclosureType.JungleHabitat),
+    new Trout('Bubbles', 2016, 'Needs fresh water', EnclosureType.AquaticHabitat)
   ];
 }
 

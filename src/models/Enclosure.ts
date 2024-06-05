@@ -1,6 +1,7 @@
+import EnclosureType from './EnclosureType';
+
 class Enclosure {
-  constructor(public id: number, public name: string, public builtInYear: number) {}
+  constructor(public id: EnclosureType, public name: string, public builtInYear: number) {}
 }
 
 export default Enclosure;
-

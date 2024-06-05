@@ -1,4 +1,5 @@
 import { differenceInYears } from 'date-fns';
+import EnclosureType from './EnclosureType';
 
 class Animal {
   get age(): number {
@@ -10,7 +11,7 @@ class Animal {
     public yearOfBirth: number,
     public continent: string,
     public specialNeeds: string,
-    public enclosureId: number
+    public enclosureId: EnclosureType
   ) {}
 }
 export default Animal;
