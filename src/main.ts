@@ -30,7 +30,7 @@ function displayEnclosures() {
     animalsInEnclosure.forEach((animal) => {
       const animalDiv = document.createElement('div');
 
-      animalDiv.innerHTML = `${animal.emoji} ${animal.name}, Age: ${animal.age}, Needs: ${animal.specialNeeds}`;
+      animalDiv.innerHTML = `${animal.emoji} ${animal.name}, Age: ${animal.age}, ${animal.specialNeeds}`;
       enclosureDiv.appendChild(animalDiv);
     });
 

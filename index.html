@@ -22,8 +22,8 @@
 
       <h2>Add New Animal</h2>
       <form id="animalForm">
-        <label for="animalType">Animal Type:</label>
-        <select id="animalType">
+        <select id="animalType" required>
+          <option selected disabled>Select animal type...</option>
           <option value="Lion">🦁 Lion</option>
           <option value="Elephant">🐘 Elephant</option>
           <option value="Dolphin">🐬 Dolphin</option>
@@ -34,13 +34,13 @@
         <input type="text" id="name" placeholder="Name" required />
         <input type="number" id="yearOfBirth" placeholder="Year of birth" required />
         <input type="text" id="specialNeeds" placeholder="Special needs" />
-        <label for="enclosureId">Enclosure:</label>
-        <select id="enclosureId">
+        <select id="enclosureId" required>
+          <option selected disabled>Select enclosure...</option>
           <option value="1">Savannah Habitat</option>
           <option value="2">Jungle Habitat</option>
           <option value="3">Aquatic Habitat</option>
-          <option value="4">Reptile House</option></select
-        ><br />
+          <option value="4">Reptile House</option>
+        </select>
         <button type="submit">Create Animal</button>
       </form>
     </main>
