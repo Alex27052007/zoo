@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zoo Management</title>
+    <style>
+      .enclosure {
+        border: 1px solid #ccc;
+        margin: 10px;
+        padding: 10px;
+      }
+      .animal {
+        margin: 5px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <main id="app">
+      <h1>Zoo Management</h1>
+      <div id="enclosures"></div>
+
+      <h2>Add New Animal</h2>
+      <form id="animalForm">
+        <label for="animalType">Animal Type:</label>
+        <select id="animalType">
+          <option value="Lion">🦁 Lion</option>
+          <option value="Elephant">🐘 Elephant</option>
+          <option value="Dolphin">🐬 Dolphin</option>
+          <option value="Snake">🐍 Snake</option>
+          <option value="Parrot">🦜 Parrot</option>
+          <option value="Trout">🐟 Trout</option></select
+        ><br />
+        <input type="text" id="name" placeholder="Name" required />
+        <input type="number" id="yearOfBirth" placeholder="Year of birth" required />
+        <input type="text" id="specialNeeds" placeholder="Special needs" />
+        <label for="enclosureId">Enclosure:</label>
+        <select id="enclosureId">
+          <option value="1">Savannah Habitat</option>
+          <option value="2">Jungle Habitat</option>
+          <option value="3">Aquatic Habitat</option>
+          <option value="4">Reptile House</option></select
+        ><br />
+        <button type="submit">Create Animal</button>
+      </form>
+    </main>
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>
